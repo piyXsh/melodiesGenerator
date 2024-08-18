@@ -1,0 +1,6 @@
+streamlit
+tensorflow
+music21
+pretty_midi
+pydub
+numpy

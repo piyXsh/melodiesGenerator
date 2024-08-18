@@ -8,11 +8,11 @@ from pydub import AudioSegment
 
 
 NOTE_MAPPINGS = {
-    "C4": 60, "C#4": 61, "D4": 62, "D#4": 63, "E4": 64, "F4": 65,
+    "HOLD":"_","REST":"r","C4": 60, "C#4": 61, "D4": 62, "D#4": 63, "E4": 64, "F4": 65,
     "F#4": 66, "G4": 67, "G#4": 68, "A4": 69, "A#4": 70, "B4": 71,
-    "C5": 72, "D5": 74, "E5": 76, "F5": 77, "G5": 79, "A5": 81,"HOLD":"_","REST":"r"
+    "C5": 72, "D5": 74, "E5": 76, "F5": 77, "G5": 79, "A5": 81
 }
-NOTE_OPTIONS=[f"{note} (MIDI {midi})" for note, midi in NOTE_MAPPINGS.items()]
+NOTE_OPTIONS=[f"{item}" for item in NOTE_MAPPINGS.keys()]
 
 
 
@@ -71,12 +71,12 @@ def main():
     for note in st.session_state.selections:
         note=note.split()[0]
         seed+=str(NOTE_MAPPINGS[note])
-        st.write(seed)
+        st.write(note)
         seed+=" "
 
 
     # seed = st.text_input("Enter seed melody:", "67 _ 67 _ 65 64 _ _")
-    temperature = st.slider("Select temperature:", 0.0, 1.0, 0.5)
+    temperature = st.slider("Set Creativity Value (where 0 = less creative, 1 = more creativity):", 0.0, 1.0, 0.5)
     
     if st.button("Generate and Play Melody"):
         mg = MelodyGenerator()
