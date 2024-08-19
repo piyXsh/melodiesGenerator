@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "streamlit-midi-to-wav"
+name = "melodiesgenerator"
 version = "0.1.0"
-description = "A Streamlit app for converting MIDI to WAV with custom synthesis."
-authors = ["Your Name <youremail@example.com>"]
+description = "A Streamlit app for generating melodies from MIDI files."
+authors = ["Piyush <piyushaggarwal584@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "3.10"
