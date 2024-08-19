@@ -13,7 +13,7 @@ class MelodyGenerator:
         """Constructor that initialises TensorFlow model"""
 
         self.model_path = model_path
-        self.model = keras.models.load_model(model_path)
+        self.model = keras.models.load_model(model_path,compile=False)
 
         with open(MAPPING_PATH, "r") as fp:
             self._mappings = json.load(fp)
