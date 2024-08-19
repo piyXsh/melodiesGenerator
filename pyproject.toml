@@ -1,2 +1,18 @@
-[python]
-version = "3.10"
+[tool.poetry]
+name = "streamlit-midi-to-wav"
+version = "0.1.0"
+description = "A Streamlit app for converting MIDI to WAV with custom synthesis."
+authors = ["Your Name <youremail@example.com>"]
+
+[tool.poetry.dependencies]
+python = "3.10"
+numpy = "*"
+pretty_midi = "*"
+pydub = "*"
+scipy = "*"
+tensorflow = "2.10.0"
+streamlit = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
