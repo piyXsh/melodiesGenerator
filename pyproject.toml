@@ -1,19 +1,2 @@
-[tool.poetry]
-name = "melodiesgenerator"
-version = "0.1.0"
-description = "A Streamlit app for melody generation"
-authors = ["Your Name <your.email@example.com>"]
-
-[tool.poetry.dependencies]
-python = "3.10"
-streamlit = "^1.24.0"
-tensorflow = "2.10.0"
-midi2audio = "^0.1.1"
-pyfluidsynth = "^1.3.0"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.scripts]
-start = "streamlit run app.py"
+[python]
+version = "3.10"
