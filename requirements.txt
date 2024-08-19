@@ -1,6 +1,6 @@
-streamlit
-tensorflow==2.10.0
-music21
+numpy
 pretty_midi
 pydub
-numpy
+scipy
+tensorflow==2.10.0
+streamlit
