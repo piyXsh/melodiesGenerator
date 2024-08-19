@@ -1,6 +1,7 @@
 import json
 import numpy as np
-import tensorflow.keras as keras
+import tensorflow as tf  
+from tensorflow import keras  
 import music21 as m21
 import io
 import tempfile
