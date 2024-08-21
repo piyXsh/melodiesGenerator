@@ -99,7 +99,7 @@ def midi_to_wav(midi_data, sample_rate=44100, highpass_cutoff=100, filter_cutoff
 
 # Streamlit app
 def main():
-    st.title("Melody Generator and Player")
+    st.title("Melody Generator")
 
     # Initialize session state for selected notes
     if 'selections' not in st.session_state:
@@ -125,7 +125,7 @@ def main():
     # Creativity temperature slider
     temperature = st.slider("Set Creativity Value (where 0 = less creative, 1 = more creative):", 0.0, 1.0, 0.5)
     
-    if st.button("Generate and Play Melody"):
+    if st.button("Generate Melody"):
         mg = MelodyGenerator()
         melody = mg.generate_melody(seed, num_steps=500, max_sequence_length=SEQUENCE_LENGTH, temperature=temperature)
         
