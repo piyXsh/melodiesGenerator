@@ -125,7 +125,11 @@ def main():
     # Creativity temperature slider
     temperature = st.slider("Set Creativity Value (where 0 = less creative, 1 = more creative):", 0.0, 1.0, 0.5)
     
+<<<<<<< HEAD
     if st.button("Generate Melody"):
+=======
+    if st.button("Generate"):
+>>>>>>> 381eebef93f1762dcf78a31bac727b6756d6f2ea
         mg = MelodyGenerator()
         melody = mg.generate_melody(seed, num_steps=500, max_sequence_length=SEQUENCE_LENGTH, temperature=temperature)
         
